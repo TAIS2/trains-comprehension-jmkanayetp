@@ -10,34 +10,34 @@ package trains;
  * @author javergarav
  */
 public class Reservation {
-    
-    private int id;
-    private String date;
-    private double cost;
+
+    private int idReservation;
+    private String dateReservation;
+    private double costReservation;
     private Family family;
 
-    public int getId() {
-        return id;
+    public int getIdReservation() {
+        return idReservation;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdReservation(int idReservation) {
+        this.idReservation = idReservation;
     }
 
-    public String getDate() {
-        return date;
+    public String getDateReservation() {
+        return dateReservation;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setDateReservation(String dateReservation) {
+        this.dateReservation = dateReservation;
     }
 
-    public double getCost() {
-        return cost;
+    public double getCostReservation() {
+        return costReservation;
     }
 
-    public void setCost(double cost) {
-        this.cost = cost;
+    public void setCostReservation(double costReservation) {
+        this.costReservation = costReservation;
     }
 
     public Family getFamily() {
@@ -46,6 +46,5 @@ public class Reservation {
 
     public void setFamily(Family family) {
         this.family = family;
-    } 
-    
+    }
 }

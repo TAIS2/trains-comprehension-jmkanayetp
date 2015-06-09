@@ -33,48 +33,48 @@ public class Train {
         this.wagons = wagons;
     }
     
-    public void accommodate(Reservation r) {
-        if (r.getFamily().getMembers().size() <= (wagons.get(0).getChairs() - wagons.get(0).getOccupiedChairs())) {
-            ArrayList<Reservation> reservations = new ArrayList<Reservation>();
+    public void accommodate(Reservation reservation) {
+        if (reservation.getFamily().getPersons().size() <= (wagons.get(0).getTotalChairsWagon()- wagons.get(0).getOccupiedChairsWagon())) {
+            ArrayList<Reservation> reservations = new ArrayList<>();
             if (wagons.get(0).getReservations() == null) {
-                reservations.add(r);
+                reservations.add(reservation);
             } else {
                 for (Reservation res : wagons.get(0).getReservations()) { 
                     reservations.add(res);
                 }
-                reservations.add(r);
+                reservations.add(reservation);
             }
             wagons.get(0).setReservations(reservations);
-            wagons.get(0).setOccupiedChairs(wagons.get(0).getOccupiedChairs() + r.getFamily().getMembers().size());
-            System.out.println("Family with reservation #" + r.getId() + " added to wagon #1.");
+            wagons.get(0).setOccupiedChairsWagon(wagons.get(0).getOccupiedChairsWagon()+ reservation.getFamily().getPersons().size());
+            System.out.println("Family with reservation #" + reservation.getIdReservation()+ " added to wagon #1.");
         } else {
-            if (r.getFamily().getMembers().size() <= (wagons.get(1).getChairs() - wagons.get(1).getOccupiedChairs())) {
-                ArrayList<Reservation> reservations = new ArrayList<Reservation>();
+            if (reservation.getFamily().getPersons().size() <= (wagons.get(1).getTotalChairsWagon()- wagons.get(1).getOccupiedChairsWagon())) {
+                ArrayList<Reservation> reservations = new ArrayList<>();
                 if (wagons.get(1).getReservations() == null) {
-                    reservations.add(r);
+                    reservations.add(reservation);
                 } else {
                     for (Reservation res : wagons.get(1).getReservations()) {
                         reservations.add(res);
                     }
-                    reservations.add(r);
+                    reservations.add(reservation);
                 }
                 wagons.get(1).setReservations(reservations);
-                wagons.get(1).setOccupiedChairs(wagons.get(1).getOccupiedChairs() + r.getFamily().getMembers().size());
-                System.out.println("Family with reservation #" + r.getId() + " added to wagon #2.");
+                wagons.get(1).setOccupiedChairsWagon(wagons.get(1).getOccupiedChairsWagon()+ reservation.getFamily().getPersons().size());
+                System.out.println("Family with reservation #" + reservation.getIdReservation()+ " added to wagon #2.");
             } else {
-                if (r.getFamily().getMembers().size() <= (wagons.get(2).getChairs() - wagons.get(2).getOccupiedChairs())) {
-                    ArrayList<Reservation> reservations = new ArrayList<Reservation>();
+                if (reservation.getFamily().getPersons().size() <= (wagons.get(2).getTotalChairsWagon() - wagons.get(2).getOccupiedChairsWagon())) {
+                    ArrayList<Reservation> reservations = new ArrayList<>();
                     if (wagons.get(2).getReservations() == null) {
-                        reservations.add(r);
+                        reservations.add(reservation);
                     } else {
                         for (Reservation res : wagons.get(2).getReservations()) {
                             reservations.add(res);
                         }
-                        reservations.add(r);
+                        reservations.add(reservation);
                     }
                     wagons.get(2).setReservations(reservations);
-                    wagons.get(2).setOccupiedChairs(wagons.get(2).getOccupiedChairs() + r.getFamily().getMembers().size());
-                    System.out.println("Family with reservation #" + r.getId() + " added to wagon #3.");
+                    wagons.get(2).setOccupiedChairsWagon(wagons.get(2).getOccupiedChairsWagon()+ reservation.getFamily().getPersons().size());
+                    System.out.println("Family with reservation #" + reservation.getIdReservation()+ " added to wagon #3.");
                 }
             }   
         }

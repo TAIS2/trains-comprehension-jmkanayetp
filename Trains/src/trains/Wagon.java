@@ -12,34 +12,34 @@ import java.util.List;
  * @author javergarav
  */
 public class Wagon {
-    
-    private int id;
-    private int chairs;
-    private int occupiedChairs;
+
+    private int idWagon;
+    private int totalChairsWagon;
+    private int occupiedChairsWagon;
     private List<Reservation> reservations;
 
-    public int getId() {
-        return id;
+    public int getIdWagon() {
+        return idWagon;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdWagon(int idWagon) {
+        this.idWagon = idWagon;
     }
 
-    public int getChairs() {
-        return chairs;
+    public int getTotalChairsWagon() {
+        return totalChairsWagon;
     }
 
-    public void setChairs(int chairs) {
-        this.chairs = chairs;
+    public void setTotalChairsWagon(int totalChairsWagon) {
+        this.totalChairsWagon = totalChairsWagon;
     }
 
-    public int getOccupiedChairs() {
-        return occupiedChairs;
+    public int getOccupiedChairsWagon() {
+        return occupiedChairsWagon;
     }
 
-    public void setOccupiedChairs(int occupiedChairs) {
-        this.occupiedChairs = occupiedChairs;
+    public void setOccupiedChairsWagon(int occupiedChairsWagon) {
+        this.occupiedChairsWagon = occupiedChairsWagon;
     }
 
     public List<Reservation> getReservations() {
@@ -49,5 +49,4 @@ public class Wagon {
     public void setReservations(List<Reservation> reservations) {
         this.reservations = reservations;
     }
-    
 }

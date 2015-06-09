@@ -12,24 +12,23 @@ import java.util.List;
  * @author javergarav
  */
 public class Family {
-    
-    private int id;
-    private List<Person> members;
 
-    public int getId() {
-        return id;
+    private int idFamily;
+    private List<Person> persons;
+
+    public int getIdFamily() {
+        return idFamily;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdFamily(int idFamily) {
+        this.idFamily = idFamily;
     }
 
-    public List<Person> getMembers() {
-        return members;
+    public List<Person> getPersons() {
+        return persons;
     }
 
-    public void setMembers(List<Person> members) {
-        this.members = members;
+    public void setPersons(List<Person> persons) {
+        this.persons = persons;
     }
-      
 }
